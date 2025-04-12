@@ -6,8 +6,8 @@ Donate link: https://ko-fi.com/jeroenpeters
 Tags: dropdown, menu, navigation, select, quicknav
 Requires at least: 3.0.1
 Requires PHP: 5.3
-Tested up to: 6.6
-Stable tag: 1.5.1
+Tested up to: 6.8
+Stable tag: 1.5.2
 
 WordPress plugin which provides a widget with a clickable dropdown of a WordPress navigation menu. It supports one level of parent-child menu's.
 
@@ -108,6 +108,10 @@ Icons made by [Freepik](https://www.flaticon.com/authors/freepik) from [Flaticon
 
 
 == Changelog ==
+
+= 1.5.2 | April 12, 2025 =
+ * Maintenance: remove textdomain calls
+ * Maintenance: WordPress 6.8 compatible
 
 = 1.5.1 | August 12, 2024 =
  * Bugfix: Prevent php notice

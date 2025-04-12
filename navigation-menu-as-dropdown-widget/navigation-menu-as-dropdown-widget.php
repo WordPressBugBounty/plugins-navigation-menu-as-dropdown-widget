@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Navigation menu as dropdown Widget
  * Description: WordPress plugin which provides a widget with a clickable dropdown of a WordPress navigation menu. It currently supports one level of parent-child structure
- * Version: 1.5.1
+ * Version: 1.5.2
  * Author: Jeroen Peters
  * Author URI: https://jeroenpeters.dev
  * Text Domain: navigation-menu-as-dropdown-widget
@@ -18,8 +18,6 @@ if (!function_exists('add_action')) {
 
 function JP_Dropdown_Menu_widget_register()
 {
-    load_plugin_textdomain('navigation-menu-as-dropdown-widget', false, dirname(plugin_basename(__FILE__)) . '/translation/');
-
     return register_widget('JP_Dropdown_Menu_widget');
 }
 
