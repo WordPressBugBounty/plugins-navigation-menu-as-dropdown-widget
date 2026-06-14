@@ -1,12 +1,12 @@
 <?php
 /**
  * Plugin Name: Navigation menu as dropdown Widget
+ * Plugin URI: https://jeroenpeters.dev/english/software/dropdown-navigation-wordpress-plugin
  * Description: WordPress plugin which provides a widget with a clickable dropdown of a WordPress navigation menu. It currently supports one level of parent-child structure
- * Version: 1.5.2
+ * Version: 1.5.3
  * Author: Jeroen Peters
  * Author URI: https://jeroenpeters.dev
  * Text Domain: navigation-menu-as-dropdown-widget
- * Domain Path: /translation
  * License: GPL2
  */
 
@@ -65,7 +65,7 @@ class JP_Dropdown_Menu_widget extends WP_Widget
             echo $args['before_title'] . $this->widget_title . $args['after_title'];
         }
 
-        echo '<label class="screen-reader-text" for="select_' . $this->id . '">' . $this->widget_title . '</label>';
+        echo '<label class="screen-reader-text" for="select_' . $this->id . '">' . esc_html($this->widget_title) . '</label>';
         echo '<select name="pd_' . $this->id . '" id="select_' . $this->id . '">';
 
         $this->menu_id = $instance['menu_id'];
@@ -79,7 +79,7 @@ class JP_Dropdown_Menu_widget extends WP_Widget
 
             echo '<option class="pd_first" value="#">';
             if (! empty( $this->first_option_title ) ) {
-                echo $this->first_option_title;
+                echo esc_html($this->first_option_title);
             } else {
                 echo __('Select page', 'navigation-menu-as-dropdown-widget');
             }
@@ -149,7 +149,7 @@ class JP_Dropdown_Menu_widget extends WP_Widget
                     $selected2 = '';
                 }
 
-                echo '<option value="' . $link . '" class="' . $class . '" ' . $selected2 . '>' . $prefix . $title . '</option>';
+                echo '<option value="' . esc_url($link) . '" class="' . esc_attr($class) . '" ' . $selected2 . '>' . $prefix . esc_html($title) . '</option>';
             }
         } else {
             echo '<option>' . __('No pages found', 'navigation-menu-as-dropdown-widget') . '</option>';
@@ -223,7 +223,7 @@ WIDGETJS;
                 <?php
                 foreach(wp_get_nav_menus() as $menu)
                 {
-                    echo '<option value="' . $menu->term_id . '"' . ($instance['menu_id'] == $menu->term_id ? "selected" : "") . '>' . $menu->name . '</option>';
+                    echo '<option value="' . esc_attr($menu->term_id) . '"' . ($instance['menu_id'] == $menu->term_id ? " selected" : "") . '>' . esc_html($menu->name) . '</option>';
                 }
                 ?>
             </select>
@@ -253,7 +253,7 @@ WIDGETJS;
                 echo __('Truncate titles in the dropdown ', 'navigation-menu-as-dropdown-widget');
                 echo sprintf(__('at %s characters ', 'navigation-menu-as-dropdown-widget'),
                     '<input type="text" class="widefat" style="max-width: 37px; display: inline-block;" id="' . $this->get_field_id('truncate_at') . '"
-                                    name="' . $this->get_field_name('truncate_at') . '" value="' . $instance['truncate_at'] . '"/>'); ?>
+                                    name="' . $this->get_field_name('truncate_at') . '" value="' . esc_attr($instance['truncate_at']) . '"/>'); ?>
             </label>
         </p>
 

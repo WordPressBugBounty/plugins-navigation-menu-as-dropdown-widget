@@ -6,8 +6,8 @@ Donate link: https://ko-fi.com/jeroenpeters
 Tags: dropdown, menu, navigation, select, quicknav
 Requires at least: 3.0.1
 Requires PHP: 5.3
-Tested up to: 6.8
-Stable tag: 1.5.2
+Tested up to: 7.0
+Stable tag: 1.5.3
 
 WordPress plugin which provides a widget with a clickable dropdown of a WordPress navigation menu. It supports one level of parent-child menu's.
 
@@ -17,14 +17,13 @@ WordPress plugin which provides a widget with a clickable dropdown of a WordPres
 Convert a Navigation Menu to a dropdown which you visitors can use to navigate to another page.
 This can be a nifty element on mobile webpages or just to provide a quick way to navigate to users.
 
-We are proud to be featured on:
- - [WordPress tutorials](https://wpglob.com/blog/)
- - [WP Missing: install the Navigation as dropdown plugin](https://wpmissing.com/plugins/site-dropdown-menu-widget/)
- - The blog of [WordPress survey plugin](https://ays-pro.com/wordpress/survey-maker)
+We are proud to be featured on [WP Missing: install the Navigation as dropdown plugin](https://wpmissing.com/plugins/site-dropdown-menu-widget/)
 
-Did you know you can try out this widget using TasteWP?
+Did you know you can try this widget instantly and for free using TasteWP?
 [Try it out here, without any obligations](https://demo.tastewp.com/navigation-menu-as-dropdown-widget)
 
+#### Support
+If you like this plugin and want to support and/or thank me, [please buy me a coffee](https://ko-fi.com/jeroenpeters).
 
 == Installation ==
 
@@ -78,7 +77,7 @@ I do offer help on styling / CSS if you are willing to make a small donation.
 
 = Does it support more than 1 level in linkstructure? =
 
-No, not at this moment. I will work on that. It currently supports one level of parent-child structure.
+No, not at this moment. I will work on that. It currently supports one sublevel of parent-child structure.
 
 = Support/Donate =
 
@@ -108,6 +107,10 @@ Icons made by [Freepik](https://www.flaticon.com/authors/freepik) from [Flaticon
 
 
 == Changelog ==
+
+= 1.5.3 | June 14, 2025 =
+ * Maintenance: cleaned up code
+ * Maintenance: WordPress 7.0 compatible
 
 = 1.5.2 | April 12, 2025 =
  * Maintenance: remove textdomain calls
